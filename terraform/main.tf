@@ -1,0 +1,13 @@
+provider "aws" {
+region = "us-east-1"
+access_key = "AKIAXFOFGNIUFQGWP7N2"
+secret_key = "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"
+}
+resource "aws_instance" "key" {
+ami = " "
+instance_type ="t2.micro"
+vpc_security_group_ids = [aws_security_group.demo-sg.id]
+tags= {
+name = "auto-instance"
+}
+}
